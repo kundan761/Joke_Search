@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Joke Search</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Joke Search</h1>
+        <div class="input-group mb-3">
+            <input type="text" id="search" class="form-control" placeholder="Search for jokes">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="searchButton" onclick="searchJokes()">Search</button>
+            </div>
+        </div>
+        <div id="jokes" class="row">
+            <!-- Jokes will be added here by displayJokes function -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
