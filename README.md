@@ -26,7 +26,7 @@ This is a simple web application for browsing and favoriting  jokes.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/dad-jokes-app.git
+   https://github.com/kundan761/Joke_Search.git
 2. Install dependencies:
    ```bash
    cd Backend
