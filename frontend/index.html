@@ -1,22 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Joke Search</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-    <h1 style="margin: auto; width: fit-content; padding-bottom: 10px;">Joke Search</h1>
-    <div class="container">
-        <div class="input-group mb-3">
-            <input type="text" id="search" class="form-control" placeholder="Search for jokes">
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" id="searchButton" onclick="searchJokes()">Search</button>
-            </div>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <Navbar style="display: flex; width: fit-content; margin: auto; gap: 20px">
+      <h3 style="width: fit-content; margin: auto">
+        <a href="index.html">Home</a>
+      </h3>
+      <h3 style="width: fit-content; margin: auto">
+        <a href="http://localhost:3000/favourites">Favourites</a>
+      </h3>
+    </Navbar>
+    <h1 style="margin: auto; width: fit-content; padding: 10px">Joke Search</h1>
+    <div class="container" style="width: 50%; margin: auto">
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          id="search"
+          class="form-control"
+          placeholder="Search for jokes"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            id="searchButton"
+            onclick="searchJokes()"
+          >
+            Search
+          </button>
         </div>
-        <div id="jokes" class="row">
-            <!-- Jokes will be added here by displayJokes function -->
-        </div>
+      </div>
+      <div id="jokes" class="row">
+        <!-- Jokes will be added here by displayJokes function -->
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

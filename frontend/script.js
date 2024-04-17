@@ -16,7 +16,7 @@ function displayJokes(jokes) {
             <div class="card">
                 <div class="card-body">
                     <p>${joke.joke}</p>
-                    <button onclick="favouriteJoke('${joke.id}')">Favourite</button>
+                    <button onclick="favouriteJoke('${joke.id}', '${joke.joke}')">Favourite</button>
                 </div>
             </div>
         `;
@@ -24,6 +24,14 @@ function displayJokes(jokes) {
     });
 }
 
-async function favouriteJoke(id) {
-    await fetch(`/favourite/${id}`, { method: 'POST' });
+async function favouriteJoke(id, text) {
+    await fetch(`http://localhost:3000/favourites/${id}`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ jokeText: text })
+    });
 }
+
+

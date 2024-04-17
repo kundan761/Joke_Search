@@ -1,27 +1,13 @@
 const express = require("express");
 const connection = require("./config/db");
+const fav = require("./routes/fav.routes");
+const table = require("./middlewares/table")
+const cors = require("cors")
 const app = express();
 app.use(express.json());
+app.use(cors());
 
-app.post("/favourite/:id", (req, res) => {
-  const { id } = req.params;
-  connection.query(
-    "INSERT INTO favourites (id) VALUES (?)",
-    [id],
-    (error, results) => {
-      if (error) {
-        console.error(error);
-        res
-          .status(500)
-          .json({
-            error: "An error occurred while saving the joke to the database",
-          });
-      } else {
-        res.json({ message: "Joke saved successfully" });
-      }
-    }
-  );
-});
+app.use("/favourites",table, fav);
 
 app.listen(3000, () => {
     try {
